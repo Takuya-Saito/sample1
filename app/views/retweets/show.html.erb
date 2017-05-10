@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tweet:</strong>
+  <%= @retweet.tweet_id %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @retweet.text %>
+</p>
+
+<%= link_to 'Edit', edit_retweet_path(@retweet) %> |
+<%= link_to 'Back', retweets_path %>

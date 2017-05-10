@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tweet:</strong>
+  <%= @time_line.tweet_id %>
+</p>
+
+<p>
+  <strong>Retweet:</strong>
+  <%= @time_line.retweet_id %>
+</p>
+
+<%= link_to 'Edit', edit_time_line_path(@time_line) %> |
+<%= link_to 'Back', time_lines_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Time Lines</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tweet</th>
+      <th>Retweet</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @time_lines.each do |time_line| %>
+      <tr>
+        <td><%= time_line.tweet_id %></td>
+        <td><%= time_line.retweet_id %></td>
+        <td><%= link_to 'Show', time_line %></td>
+        <td><%= link_to 'Edit', edit_time_line_path(time_line) %></td>
+        <td><%= link_to 'Destroy', time_line, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Time line', new_time_line_path %>
