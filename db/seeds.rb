@@ -6,4 +6,12 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Tweet.create(text: 'hoge')
+#Tweet.create(text: 'hoge')
+
+require "csv"
+
+lines_csv = CSV.readlines("db/lines.csv")
+lines_csv.shift
+lines_csv.each do |row|
+  Line.create(memo: row[1])
+end
