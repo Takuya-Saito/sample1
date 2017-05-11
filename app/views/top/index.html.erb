@@ -1,0 +1,15 @@
+  <div class="posting_form top_content">
+    <header class="posting_header">
+      <div class="posting_image icon_image" style="background-image: url(http://www.nt.zennoh.or.jp/news/announcement/announcementnews/img/momo.jpg);"></div>
+      <div class="posting_user_info user_info">
+        <pre>current_user.name</pre>
+      </div>
+    </header>
+    <%= form_for(@tweet) do |f| %>
+      <%= f.text_field :text, placeholder: "お題を投稿してください" %>
+      <%= f.submit "返信する" %>
+    <% end %>
+  </div>
+  <%= render @time_lines_resource %>
+
+  <%=  paginate(@time_lines)  %>

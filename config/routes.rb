@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: 'top#index'
   resources :tweets
   resources :retweets
   resources :time_lines
